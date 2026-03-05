@@ -194,6 +194,13 @@ body{font-family:'Inter',sans-serif;background:var(--light);color:var(--text);li
 .learn-card .learn-example{background:var(--light);border-radius:10px;padding:16px;margin-top:14px;}
 .learn-card .learn-example h4{font-size:.82em;font-weight:700;color:var(--navy);margin-bottom:6px;}
 .learn-card .learn-example p{font-size:.85em;color:var(--muted);margin-bottom:0;font-style:italic;}
+.learn-card .learn-framework{background:#1a1a2e;border-radius:10px;padding:18px 20px;margin-top:14px;border-left:3px solid var(--accent);}
+.learn-card .learn-framework h4{font-size:.82em;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.learn-card .learn-framework ol{list-style:none;padding:0;margin:0;counter-reset:fw;}
+.learn-card .learn-framework ol li{counter-increment:fw;font-size:.84em;color:rgba(255,255,255,.75);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.5;}
+.learn-card .learn-framework ol li:last-child{border-bottom:none;}
+.learn-card .learn-framework ol li::before{content:counter(fw) ". ";color:var(--accent);font-weight:700;}
+.learn-card .learn-framework ol li span{color:rgba(255,255,255,.4);font-size:.9em;}
 .learn-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;}
 .learn-dots{display:flex;gap:8px;}
 .learn-dot{width:10px;height:10px;border-radius:50%;background:var(--border);transition:background .2s;}
@@ -355,6 +362,18 @@ footer a{color:#556677;text-decoration:none;}
         <h4>Example</h4>
         <p>Uber entering a new city: How many daily commuters? What % would switch from taxis? At what average fare? Bottom-up gives a realistic SOM — not the fantasy TAM investors love to quote.</p>
       </div>
+      <div class="learn-framework">
+        <h4>TAM / SAM / SOM Template</h4>
+        <ol>
+          <li>TAM (Total Addressable Market) <span>— Total global revenue if you had 100% market share.</span></li>
+          <li>SAM (Serviceable Addressable Market) <span>— The slice you can actually reach with your product and channels.</span></li>
+          <li>SOM (Serviceable Obtainable Market) <span>— Realistic capture in 1-3 years given competition and resources.</span></li>
+          <li>Top-Down Check <span>— Industry reports, government data, analyst estimates. Sanity check.</span></li>
+          <li>Bottom-Up Build <span>— Users x price x frequency. Build from unit-level assumptions.</span></li>
+          <li>Key Assumptions <span>— List every assumption explicitly. Test the most uncertain ones first.</span></li>
+          <li>Growth Drivers <span>— What expands the market itself? Regulation, tech shifts, behaviour change?</span></li>
+        </ol>
+      </div>
       <div class="learn-nav">
         <span class="learn-counter">1 of 4</span>
         <div class="learn-dots"><span class="learn-dot active"></span><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot"></span></div>
@@ -374,6 +393,18 @@ footer a{color:#556677;text-decoration:none;}
       <div class="learn-example">
         <h4>Example</h4>
         <p>Uber spends heavily on driver and rider incentives to grow. If a rider's LTV is $500 but CAC is $50, that's 10x return. But if subsidies push CAC to $400, the model breaks — growth becomes a cash bonfire.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Unit Economics Calculator</h4>
+        <ol>
+          <li>Revenue per Unit <span>— Average revenue per transaction, ride, order, or subscription period.</span></li>
+          <li>Variable Cost per Unit <span>— Direct costs: driver pay, processing fees, support cost per unit.</span></li>
+          <li>Contribution Margin <span>— Revenue - variable costs. Must be positive for viability.</span></li>
+          <li>Customer Acquisition Cost (CAC) <span>— Total sales + marketing spend / new customers acquired.</span></li>
+          <li>Lifetime Value (LTV) <span>— Average revenue per customer x average lifespan. LTV must exceed CAC.</span></li>
+          <li>LTV:CAC Ratio <span>— Target 3:1 or higher. Below 1:1 = burning cash on every customer.</span></li>
+          <li>Payback Period <span>— Months to recover CAC from contribution margin. Shorter = better.</span></li>
+        </ol>
       </div>
       <div class="learn-nav">
         <span class="learn-counter">2 of 4</span>
@@ -395,6 +426,18 @@ footer a{color:#556677;text-decoration:none;}
         <h4>Example</h4>
         <p>Uber sees surge pricing complaints spike. Why? Prices 5x normal. Why? Not enough drivers. Why? Drivers avoid certain areas. Why? Safety concerns. The fix isn't capping surge — it's addressing driver safety.</p>
       </div>
+      <div class="learn-framework">
+        <h4>5 Whys Root Cause Template</h4>
+        <ol>
+          <li>State the Problem <span>— Be specific. "Revenue dropped 15% in Q3" not "things aren't going well."</span></li>
+          <li>Why #1 <span>— First-level cause. Often a symptom, not the root. Keep going.</span></li>
+          <li>Why #2 <span>— Dig deeper. Ask "why did THAT happen?" Challenge surface explanations.</span></li>
+          <li>Why #3 <span>— Getting closer to systemic issues. Look for process or design flaws.</span></li>
+          <li>Why #4 <span>— Usually reveals the structural or organisational cause.</span></li>
+          <li>Why #5 <span>— The root cause. Fix this, and the symptoms disappear.</span></li>
+          <li>Action Item <span>— One concrete fix for the root cause. Owner + deadline + success metric.</span></li>
+        </ol>
+      </div>
       <div class="learn-nav">
         <span class="learn-counter">3 of 4</span>
         <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot active"></span><span class="learn-dot"></span></div>
@@ -414,6 +457,17 @@ footer a{color:#556677;text-decoration:none;}
       <div class="learn-example">
         <h4>Example</h4>
         <p>Uber enters a market where Ola dominates. Subsidise rides to steal share? Launch a premium tier to avoid a price war? Focus on underserved segments like airport rides? Each path has a different competitive logic.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Competitive Moat Analysis</h4>
+        <ol>
+          <li>Network Effects <span>— Does the product get better as more people use it? Direct or indirect?</span></li>
+          <li>Switching Costs <span>— How painful is it for users to leave? Data lock-in, learning curve, contracts?</span></li>
+          <li>Scale Economies <span>— Does unit cost drop as you grow? Fixed cost leverage?</span></li>
+          <li>Brand & Trust <span>— Would users pay more or choose you by default? How long to replicate?</span></li>
+          <li>Regulatory Moat <span>— Licences, compliance barriers, government relationships?</span></li>
+          <li>Moat Durability <span>— Is the moat getting wider or narrower over time? What threatens it?</span></li>
+        </ol>
       </div>
       <div class="learn-nav">
         <span class="learn-counter">4 of 4</span>
